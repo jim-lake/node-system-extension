@@ -1,0 +1,21 @@
+{
+  "name": "node-system-extension",
+  "version": "0.0.1",
+  "description": "Electron addon to install system extensions",
+  "main": "src/index.js",
+  "gypfile": true,
+  "files": [
+    "binding.gyp",
+    "src/"
+  ],
+  "scripts": {
+    "build": "node-gyp build",
+    "test": "node ./test/basic.js",
+    "pretty": "prettier --write binding.gyp --parser json && prettier --write **/*.js && clang-format -i src/mac/*",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^8.2.1"
+  }
+}
