@@ -20,8 +20,6 @@ static auto napiCallback = [](Env env, Function cb, CallbackParams *params) {
 };
 static void _installCallback(const std::string reason, const std::string identifier,
                       const long result) {
-  printf("_installCallback: %s, %s, %ld\n", reason.c_str(), identifier.c_str(),
-         result);
   if (g_tsfn != NULL) {
     const auto param = new CallbackParams();
     param->reason = reason;

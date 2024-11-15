@@ -1,6 +1,6 @@
 {
   "name": "node-system-extension",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Electron addon to install system extensions",
   "main": "src/index.js",
   "gypfile": true,
