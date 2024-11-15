@@ -7,17 +7,17 @@ In modern electron the render processes don't run NSRunLoop.
 
 ## Prerequisites
 
-You will need a SystemExtension in `PACKAGE/Contents/Library/SystemExtensions`
-
-You will need to copy your app to `/Applications` before you run it.
+* You will need a SystemExtension in `PACKAGE/Contents/Library/SystemExtensions`
+* You will need to copy your app to `/Applications` before you run it.
+* You will need the entitlement `com.apple.developer.system-extension.install` in your electron app.
 
 ## Usage
 
-`
+```js
 const SystemExtension = require('node-system-extension');
 
 SystemExtension.setDebug(true);
 SystemExtension.install("com.example.name.Extension", (reason, ident, result) => {
   console.log("got event:", reason, ident, result);
 });
-`
+```
