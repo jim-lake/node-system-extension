@@ -25,9 +25,8 @@ static void _installCallback(const std::string reason, const std::string identif
     param->reason = reason;
     param->identifier = identifier;
     param->result = result;
-    const auto status = g_tsfn.BlockingCall(param, napiCallback);
-    printf("blocking call result: %d\n", status);
-  } else {
+    g_tsfn.BlockingCall(param, napiCallback);
+  } else if (g_debug) {
     printf("No threadsafefunction available!\n");
   }
 }
