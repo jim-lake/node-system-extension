@@ -1,9 +1,10 @@
 {
   "name": "node-system-extension",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Electron addon to install system extensions",
   "main": "src/index.js",
   "gypfile": true,
+  "os": ["darwin"],
   "license": "MIT",
   "files": [
     "binding.gyp",
